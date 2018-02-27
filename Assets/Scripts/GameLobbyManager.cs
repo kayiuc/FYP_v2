@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameLobbyManager : MonoBehaviour {
 
@@ -8,13 +9,14 @@ public class GameLobbyManager : MonoBehaviour {
     public InputField c_roomName;
     public InputField j_roomName;
     public Dropdown maxPlayersDropDown;
+    public Text CreateFailureWarn;
+    public Text JoinFailureWarn;
 
     private byte[] MaxPlayersOptions = { 2, 4 };
 	// Use this for initialization
 	void Start () {
         DisableCreateRoomPanel();
         DisableJoinRoomPanel();
-
     }
 	
 	// Update is called once per frame
@@ -32,12 +34,6 @@ public class GameLobbyManager : MonoBehaviour {
         NetworkManager.instance.JoinRoom(j_roomName.text);
     }
 
-    public void Cancel()
-    {
-        DisableCreateRoomPanel();
-        DisableJoinRoomPanel();
-    }
-
     public void EnableCreateRoomPanel()
     {
         CreateRoomPanel.SetActive(true);
@@ -46,7 +42,9 @@ public class GameLobbyManager : MonoBehaviour {
     public void DisableCreateRoomPanel()
     {
         CreateRoomPanel.SetActive(false);
+        DisableCreateFailureWarn();
     }
+
 
     public void EnableJoinRoomPanel()
     {
@@ -56,5 +54,16 @@ public class GameLobbyManager : MonoBehaviour {
     public void DisableJoinRoomPanel()
     {
         JoinRoomPanel.SetActive(false);
+        DisableJoinFailureWarn();
+    }
+
+    public void DisableCreateFailureWarn()
+    {
+        CreateFailureWarn.enabled = false;
+    }
+
+    public void DisableJoinFailureWarn()
+    {
+        JoinFailureWarn.enabled = false;
     }
 }

@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class NetworkManager : Photon.PunBehaviour {
 
     public static NetworkManager instance = null;
 
     private string _gameVersion = "1";
+    //private GameLobbyManager gamelobbyManager;
 
     private void Awake()
     {
@@ -28,6 +30,7 @@ public class NetworkManager : Photon.PunBehaviour {
 
  
         PhotonNetwork.ConnectUsingSettings(_gameVersion);
+       
 
         Debug.Log("NetworkManager start ");
     }
@@ -60,18 +63,17 @@ public class NetworkManager : Photon.PunBehaviour {
     }
 
     public override void OnCreatedRoom()
-    {
-        //init Playerpref??
-        //LoadScene
-       
-
+    {    
         Debug.Log("OnCreatedRoom is called");
     }
 
     public override void OnJoinedRoom()
     {
         //init Playerpref??
+        
         //LoadScene
+        SceneManager.LoadScene("CharactersSelectRoom");
+        PhotonNetwork.Instantiate("PlayerInRoom", new Vector3(0, 0, 0), Quaternion.identity, 0);
 
         Debug.Log("OnJoinedRoom is called");
     }
@@ -79,6 +81,8 @@ public class NetworkManager : Photon.PunBehaviour {
     public override void OnPhotonCreateRoomFailed(object[] codeAndMsg)
     {
         //show error
+        if (SceneManager.GetActiveScene().name == "GameLobby")
+            GameObject.Find("CreateFailureWarn").GetComponent<Text>().enabled = true;
 
         Debug.Log("OnPhotonCreatedRoomFailed is called");
     }
@@ -86,6 +90,8 @@ public class NetworkManager : Photon.PunBehaviour {
     public override void OnPhotonJoinRoomFailed(object[] codeAndMsg)
     {
         //show error
+        if (SceneManager.GetActiveScene().name == "GameLobby")
+            GameObject.Find("JoinFailureWarn").GetComponent<Text>().enabled = true;
 
         Debug.Log("OnPhotonJoinRoomFailed is called");
     }
