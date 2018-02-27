@@ -240,6 +240,7 @@
     <Compile Include="Assets\PhotonChatApi\IChatClientListener.cs" />
     <Compile Include="Assets\Scripts\CharactersSelectRoomManager.cs" />
     <Compile Include="Assets\Scripts\GameLobbyManager.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\MeunManager.cs" />
     <Compile Include="Assets\Scripts\NetworkManager.cs" />
     <Compile Include="Assets\Scripts\PlayerInRoomManager.cs" />

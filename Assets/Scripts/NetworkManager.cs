@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class NetworkManager : Photon.PunBehaviour {
 
     public static NetworkManager instance = null;
+    public static GameObject localPlayer;
 
     private string _gameVersion = "1";
     //private GameLobbyManager gamelobbyManager;
@@ -57,6 +58,19 @@ public class NetworkManager : Photon.PunBehaviour {
         Debug.Log("JoinRoom in NetworkManager is called");
     }
 
+    public void OnLevelWasLoaded(int level)
+    {
+        if (level == 3)
+        {
+            string characterName = GameObject.Find("PlayerInRoom(Clone)").GetComponent<PlayerInRoomManager>().selectedCharacter.Replace("Idel", "");
+            Debug.Log("Loaded: " + characterName);
+            localPlayer = PhotonNetwork.Instantiate(characterName,
+                                      new Vector3(0, 0, 0),
+                                      Quaternion.identity,
+                                      0);
+        }
+    }
+
     public override void OnConnectedToMaster()
     {
         Debug.Log("OnConnectedToMaster is called");
@@ -69,8 +83,6 @@ public class NetworkManager : Photon.PunBehaviour {
 
     public override void OnJoinedRoom()
     {
-        //init Playerpref??
-        
         //LoadScene
         SceneManager.LoadScene("CharactersSelectRoom");
         PhotonNetwork.Instantiate("PlayerInRoom", new Vector3(0, 0, 0), Quaternion.identity, 0);
@@ -95,4 +107,5 @@ public class NetworkManager : Photon.PunBehaviour {
 
         Debug.Log("OnPhotonJoinRoomFailed is called");
     }
+
 }

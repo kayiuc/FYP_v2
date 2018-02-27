@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerInRoomManager : Photon.PunBehaviour{
+    [HideInInspector]
+    public string selectedCharacter;
 
 	// Use this for initialization
 	void Start () {
@@ -32,4 +34,7 @@ public class PlayerInRoomManager : Photon.PunBehaviour{
             }
         }
     }
+
+
+
 }

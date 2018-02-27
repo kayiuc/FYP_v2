@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class CharactersSelectRoomManager : MonoBehaviour {
+public class CharactersSelectRoomManager : Photon.PunBehaviour {
 
     const int TEAM_LEN = 2;
+
+    public static CharactersSelectRoomManager instance = null;
 
     public Text[] blueTeamTextList;
     public Text[] redTeamTextList;
@@ -18,10 +20,19 @@ public class CharactersSelectRoomManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        Lich = GameObject.Find("Lich");
-        Grunt = GameObject.Find("Grunt");
-        Soldier = GameObject.Find("Soldier");
-        Golem = GameObject.Find("Golem");
+        if(instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(this);
+        }
+
+        Lich = GameObject.Find("LichIdel");
+        Grunt = GameObject.Find("GruntIdel");
+        Soldier = GameObject.Find("SoldierIdel");
+        Golem = GameObject.Find("GolemIdel");
         
         Grunt.SetActive(false);
         Soldier.SetActive(false);
@@ -119,5 +130,32 @@ public class CharactersSelectRoomManager : MonoBehaviour {
     {
         PlayerInRoomManager playerInRoom = GameObject.Find("PlayerInRoom(Clone)").GetComponent<PlayerInRoomManager>();
         playerInRoom.ChangeTeam("red");
+    }
+
+    public void OnDestroy()
+    {
+        Debug.Log("onDestroy");
+    }
+
+    public void GameStart()
+    {
+        if(PunTeams.PlayersPerTeam[PunTeams.Team.blue].Count == PhotonNetwork.room.MaxPlayers / 2 &&
+            PunTeams.PlayersPerTeam[PunTeams.Team.red].Count == PhotonNetwork.room.MaxPlayers / 2)
+        {
+            GameObject.Find("PlayerInRoom(Clone)").GetComponent<PlayerInRoomManager>().selectedCharacter = currentSelection.name;
+            //GameObject[] PlayersList = GameObject.FindGameObjectsWithTag("Player");
+/*
+            foreach(GameObject player in PlayersList)
+            {
+                player.GetComponent<PlayerInRoomManager>().selectedCharacter = currentSelection.name;
+            }
+*/
+            Debug.Log(currentSelection.name);
+
+            if (PhotonNetwork.isMasterClient)
+            {
+                PhotonNetwork.LoadLevel("GamePlay");
+            }
+        }
     }
 }

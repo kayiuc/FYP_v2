@@ -24,34 +24,97 @@ Loading F:\Documents\FYP_v2\FYP_v2_Data\Managed\Photon3Unity3D.dll into Unity Ch
 - Completed reload, in  0.020 seconds
 Platform assembly: F:\Documents\FYP_v2\FYP_v2_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: F:\Documents\FYP_v2\FYP_v2_Data\Managed\System.dll (this message is harmless)
+OnLevelWasLoaded was found on NetworkManager
+This message has been deprecated and will be removed in a later version of Unity.
+Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
+ 
+(Filename:  Line: 376)
+
+desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
+<RI> Initializing input.
+XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
+<RI> Input initialized.
+Initialize engine version: 5.6.3f1 (d3101c3b8468)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GT 750M (ID=0xfe4)
+    Vendor:   NVIDIA
+    VRAM:     3072 MB
+    Driver:   10.18.13.5946
+Begin MonoManager ReloadAssembly
+Platform assembly: F:\Documents\FYP_v2\FYP_v2_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading F:\Documents\FYP_v2\FYP_v2_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: F:\Documents\FYP_v2\FYP_v2_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading F:\Documents\FYP_v2\FYP_v2_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: F:\Documents\FYP_v2\FYP_v2_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading F:\Documents\FYP_v2\FYP_v2_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: F:\Documents\FYP_v2\FYP_v2_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading F:\Documents\FYP_v2\FYP_v2_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: F:\Documents\FYP_v2\FYP_v2_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading F:\Documents\FYP_v2\FYP_v2_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: F:\Documents\FYP_v2\FYP_v2_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading F:\Documents\FYP_v2\FYP_v2_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+Platform assembly: F:\Documents\FYP_v2\FYP_v2_Data\Managed\Photon3Unity3D.dll (this message is harmless)
+Loading F:\Documents\FYP_v2\FYP_v2_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
+- Completed reload, in  0.019 seconds
+Platform assembly: F:\Documents\FYP_v2\FYP_v2_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: F:\Documents\FYP_v2\FYP_v2_Data\Managed\System.dll (this message is harmless)
+OnLevelWasLoaded was found on NetworkManager
+This message has been deprecated and will be removed in a later version of Unity.
+Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
+ 
+(Filename:  Line: 376)
+
 desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
 <RI> Initializing input.
 XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.801273 ms
+<RI> Initialized touch support.
+UnloadTime: 1.461289 ms
+UnloadTime: 1.114462 ms
 NetworkManager start 
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 Setting up 4 worker threads for Enlighten.
-  Thread -> id: 9c8 -> priority: 1 
-  Thread -> id: 420 -> priority: 1 
-  Thread -> id: 514 -> priority: 1 
-  Thread -> id: 18fc -> priority: 1 
+  Thread -> id: 10b8 -> priority: 1 
+  Thread -> id: 19c0 -> priority: 1 
+  Thread -> id: fb4 -> priority: 1 
+  Thread -> id: 3dd4 -> priority: 1 
+NetworkManager start 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Setting up 4 worker threads for Enlighten.
+  Thread -> id: 2edc -> priority: 1 
+  Thread -> id: 470 -> priority: 1 
+  Thread -> id: 2764 -> priority: 1 
+  Thread -> id: 17ac -> priority: 1 
 OnConnectedToMaster is called
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 5.177163 ms
+UnloadTime: 7.526260 ms
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 593.
-Total: 0.456305 ms (FindLiveObjects: 0.031646 ms CreateObjectMapping: 0.024376 ms MarkObjects: 0.392585 ms  DeleteObjects: 0.007270 ms)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 594.
+Total: 0.567495 ms (FindLiveObjects: 0.037205 ms CreateObjectMapping: 0.033356 ms MarkObjects: 0.486241 ms  DeleteObjects: 0.010263 ms)
+
+OnConnectedToMaster is called
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 CreateRoom in NetworkManager is called
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 5.288781 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 594.
+Total: 0.886951 ms (FindLiveObjects: 0.066713 ms CreateObjectMapping: 0.030363 ms MarkObjects: 0.778327 ms  DeleteObjects: 0.008553 ms)
 
 OnCreatedRoom is called
  
@@ -62,12 +125,44 @@ OnJoinedRoom is called
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-UnloadTime: 0.695790 ms
+UnloadTime: 0.773623 ms
 
-Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 741.
-Total: 0.464003 ms (FindLiveObjects: 0.041909 ms CreateObjectMapping: 0.031646 ms MarkObjects: 0.369064 ms  DeleteObjects: 0.020527 ms)
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 756.
+Total: 0.654736 ms (FindLiveObjects: 0.053028 ms CreateObjectMapping: 0.028652 ms MarkObjects: 0.546112 ms  DeleteObjects: 0.026086 ms)
 
-4
+2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+JoinRoom in NetworkManager is called
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.756945 ms
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 748.
+Total: 0.489234 ms (FindLiveObjects: 0.046186 ms CreateObjectMapping: 0.026086 ms MarkObjects: 0.395151 ms  DeleteObjects: 0.021382 ms)
+
+2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+OnJoinedRoom is called
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+onDestroy
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+UnloadTime: 1.293221 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 760.
+Total: 0.487096 ms (FindLiveObjects: 0.045331 ms CreateObjectMapping: 0.023948 ms MarkObjects: 0.409263 ms  DeleteObjects: 0.007270 ms)
+
+2
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -79,67 +174,39 @@ Set to blue team
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Set to red team
+LichIdel
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Set to blue team
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+onDestroy
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Set to red team
+UnloadTime: 1.189302 ms
+Loaded: Lich
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Set to blue team
+
+Unloading 30 unused Assets to reduce memory usage. Loaded Objects now: 537.
+Total: 0.533710 ms (FindLiveObjects: 0.034639 ms CreateObjectMapping: 0.020527 ms MarkObjects: 0.315607 ms  DeleteObjects: 0.162508 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+onDestroy
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Set to red team
+UnloadTime: 0.727009 ms
+Loaded: 
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Set to blue team
+Failed to Instantiate prefab: . Verify the Prefab is in a Resources folder (and not in a subfolder)
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Set to red team
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Set to blue team
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Set to red team
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Set to blue team
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Set to red team
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Set to red team
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Set to red team
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Set to blue team
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Set to red team
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Set to blue team
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+Unloading 30 unused Assets to reduce memory usage. Loaded Objects now: 482.
+Total: 0.498643 ms (FindLiveObjects: 0.029508 ms CreateObjectMapping: 0.017961 ms MarkObjects: 0.290803 ms  DeleteObjects: 0.159942 ms)
 
